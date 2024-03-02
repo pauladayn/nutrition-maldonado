@@ -5,7 +5,7 @@ import logo from "../../assets/logo.jpg";
 const Navbar = () => {
   return (
     //bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700
-    <nav className="bg:transparent">
+    <nav className="bg:transparent fixed inset-x-0 top-0 h-1">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="rounded-full border border-white p-3">
           <p className="self-center text-2xl font-semibold whitespace-nowrap text-black">

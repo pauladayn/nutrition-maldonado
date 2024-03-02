@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div>
-      <h1>Sobre mi</h1>
+    <div className='h-screen'>
+      <div className='h-2/5 bg-neutral'></div>
     </div>
   );
 }

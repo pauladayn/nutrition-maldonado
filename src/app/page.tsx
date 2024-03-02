@@ -1,13 +1,10 @@
-import Navbar from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import CardsContainer from '@/components/CardsContainer/CardsContainer';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-secondary">
-      <div className="flex-col min-h-2 bg-scroll bg-auto bg-center hero">
-        <Navbar />
-      </div>
-      <Footer />
+    <main className='flex min-h-screen flex-col bg-secondary'>
+      <div className='hero min-h-2'></div>
+      <CardsContainer />
     </main>
   );
 }
