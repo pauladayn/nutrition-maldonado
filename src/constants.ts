@@ -54,3 +54,25 @@ export const navLinks = [
     },
 ]
 
+export const plans = [
+    {
+        title: 'Inicial para cambiar de habitos y perder grasa',
+        info: 'Este plan es perfecto para principiantes sin experiencia previa de asesoría nutricional. Recomendamos seguirlo durante al menos 4 semanas para familiarizarse antes de considerar el paso siguiente hacia un plan personalizado',
+        path: '/plan/inicial'
+    },
+    {
+        title: 'Personalizado con kcal, porciones de comida calculadas.',
+        info: 'Obtén un plan alimenticio adaptado a tus gustos y necesidades, junto con recomendaciones sobre porciones para alcanzar tus objetivos.',
+        path: '/plan/personalizado'
+    },
+    {
+        title: 'Plan patología clínica para un cambio de hábitos y acompañar una enfermedad/patología',
+        info: 'Este plan es perfecto si nunca has tenido asesoría nutricional y prefieres evitar consultas presenciales. Se recomienda seguirlo por al menos 4 semanas antes de optar por un turno de seguimiento para monitorear progresos y mejorar síntomas clínicos.',
+        path: '/plan/patologia-clinica'
+    },
+    {
+        title: 'Sos vegetariano/vegano y no sabes por donde empezar?',
+        info: 'Perfecto para aquellos que desean adoptar una dieta basada en plantas de manera consciente y bien informada. Aprende todo lo necesario para seguir este estilo de alimentación de forma segura y saludable.',
+        path: '/plan/vegetariano-vegano'
+    },
+]

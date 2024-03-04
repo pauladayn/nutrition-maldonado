@@ -5,7 +5,7 @@ import { GeistMono } from 'geist/font/mono';
 import Navbar from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import Contact from '@/components/Contact/Contact';
-
+import Head from 'next/head';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -39,16 +39,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang='en'>
       <body className={GeistSans.className}>
         <Navbar />
+        <div className='flex-col bg-scroll bg-auto bg-center'>
+        </div>
         <Contact />
-        <main>
+        <main className='flex min-h-screen flex-col bg-neutral'>
           {children}
         </main>
         <Footer />
-        {/*      <div className='flex-col bg-scroll bg-auto bg-center'>
-        </div> */}
       </body>
     </html>
   );
