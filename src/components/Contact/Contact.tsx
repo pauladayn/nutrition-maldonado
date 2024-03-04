@@ -1,15 +1,16 @@
-import Instagram from './social-media-icons/Instagram';
-import Facebook from './social-media-icons/Facebook';
-import Whatsapp from './social-media-icons/Whatsapp';
-import Messenger from './social-media-icons/Messenger';
+import Link from 'next/link';
+import Image from 'next/image'
+import { socialMediaItems } from '@/constants';
 
 export default function Contact() {
   return (
     <div className='flex flex-col flex-wrap content-end p-8 fixed right-0 top-1/4'>
-      <Facebook />
-      <Instagram />
-      <Messenger />
-      <Whatsapp />
+      {socialMediaItems.map(({ id, href, icon, alt }) => (
+        <Link target='_blank' href={href} key={id} className='mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-lg transition duration-150 ease-in-out hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-0 active:shadow-lg cursor-pointer'
+        >
+          <Image alt={alt} src={icon} />
+        </Link>
+      ))}
     </div>
   );
 }

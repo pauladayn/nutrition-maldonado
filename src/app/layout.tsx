@@ -41,12 +41,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={GeistSans.className}>
-        <div className='flex-col bg-scroll bg-auto bg-center'>
-          <Navbar />
-        </div>
-      <Contact />
-        {children}
+        <Navbar />
+        <Contact />
+        <main>
+          {children}
+        </main>
         <Footer />
+        {/*      <div className='flex-col bg-scroll bg-auto bg-center'>
+        </div> */}
       </body>
     </html>
   );
