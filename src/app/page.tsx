@@ -1,10 +1,12 @@
-import CardsContainer from '@/components/CardsContainer/CardsContainer';
+import { Metadata } from 'next'
+
 
 export default function Home() {
   return (
     <>
-      <div className='hero min-h-2'></div>
-      <CardsContainer />
+      <div className='min-h-2 bg-paleGreen'>
+
+      </div>
     </>
   );
 }

@@ -1,12 +1,15 @@
-const Cards = ({title, info, path} : {title: string, info: string, path: string}) => {
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+const Card = ({ title, info, path, src }: { title: string, info: string, path: string, src: { href: StaticImageData, alt: string } }) => {
   return (
-    <div className='block rounded-3xl bg-white shadow-xl dark:bg-neutral-700 text-center max-w-xs flex flex-col justify-center'>
+    <div className='block rounded-3xl bg-white shadow-xl dark:bg-neutral-700 text-center max-w-xs flex flex-col'>
       <div className='p-6'>
-        <h5 className='mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50'>
+        <Image src={src.href} alt={src.alt} width={120} height={120} />
+        <h5 className='my-3 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50'>
           {title}
         </h5>
-        <p className='mb-2 text-base text-neutral-500 dark:text-neutral-300'>
-         {info}
+        <p className='my-3 text-base text-neutral-500 dark:text-neutral-300'>
+          {info}
         </p>
         <a
           href={path}
@@ -19,4 +22,4 @@ const Cards = ({title, info, path} : {title: string, info: string, path: string}
   );
 };
 
-export default Cards;
+export default Card;
