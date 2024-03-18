@@ -12,7 +12,6 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       primary: "#21a264",
-      secondary: "#EDF67D",
       paleGreen: '#dee2d0',
       olive: '#8da674',
       skyBlue: '#d0e4ff',
@@ -24,11 +23,29 @@ module.exports = {
     }),
     textColor: {
       primary: "#21a264",
-      secondary: "#62c094",
       accent: "#224631",
       olive: '#8da674',
       neutral: "#f0f0f0",
       black: "#000000",
+      skyBlue: '#d0e4ff',
+      peach: '#fedbb3',
+      paleYellow: '#fff3b5',
+      lilac: '#cdc1ff',
+    },
+    borderColor: {
+      primary: "#21a264",
+      accent: "#224631",
+      olive: '#8da674',
+    },
+    boxShadowColor: {
+      paleGreen: '#dee2d0',
+      neutral: "#f0f0f0",
+    },
+    ringColor: {
+      accent: "#224631",
+    },
+    backgroundImage: {
+      'hero-service01': "url('/public/assets/consulting.jpg')"
     },
     minHeight: {
       0: "0",
