@@ -1,150 +1,80 @@
-import Link from "next/link";
-import Image from "next/image";
-import logo from "../../assets/logo.jpg";
-import { navLinks } from "@/constants";
+'use client';
+import Link from 'next/link';
+import { navLinks } from '@/constants';
+import logo from '../../../public/assets/logoFlat.png';
+import Image from 'next/image';
+import { poppins, montserrat } from '@/app/fonts';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+
 const Navbar = () => {
   return (
-    //bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700
     <header>
-      <nav className="bg:transparent fixed inset-x-0 top-0 h-1">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link href='/' className="self-center text-2xl font-semibold whitespace-nowrap  text-accentGreen">
-            Nutri&Vita
-          </Link>
-          <div>
-            <button
-              data-collapse-toggle="navbar-dropdown"
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 dm-sans-linkss font-link"
-              aria-controls="navbar-dropdown"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-            <div
-              className="hidden w-full md:block md:w-auto"
-              id="navbar-dropdown"
-            >
-              <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                {
-                  navLinks.map(({ title, href }) => (
-                    <li className="card-blured rounded-full">
-                      <Link href={href} key={title} className="block py-2 px-3  text-accent rounded md:bg-transparent md:p-0 dm-sans-links">{title}
-                      </Link>
-                    </li>
-                  ))
-                }
-                {/*  <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                  aria-current="page"
-                >
-                  Quien soy!
-                </a> */}
-                {/* <li>
-                <button
-                  id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                >
-                  Planes
-                  <svg
-                    className="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <div
-                  id="dropdownNavbar"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-400"
-                    aria-labelledby="dropdownLargeButton"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="py-1">
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >
-                      Sign out
-                    </a>
+      <Disclosure as="nav" className="bg:transparent fixed inset-x-0 top-0 h-1 z-50">
+        {({ open }) => (
+          <>
+            <div className="mx-auto max-w-screen px-2 sm:px-6 lg:px-8 card-blured py-2">
+              <div className="relative flex h-16 items-center justify-between">
+                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  {/* Mobile menu button*/}
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-accent hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span className="absolute -inset-0.5" />
+                    <span className="sr-only">Open main menu</span>
+                    {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6" aria-hidden="true" />}
+                  </Disclosure.Button>
+                </div>
+                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+                  <div className="flex flex-shrink-0 items-center">
+                    <Link href="/" className="self-center">
+                      <Image src={logo} alt="logo-nutrivita" priority className="h-12 w-auto" />
+                    </Link>
+                  </div>
+                  <div className="flex items-center">
+                    <p className={`${montserrat.className} text-primary md:text-2xl font-semibold whitespace-nowrap`}>Nutri&Vita</p>
+                  </div>
+                  <div className="hidden sm:ml-6 sm:block">
+                    <div className="flex space-x-4">
+                      <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        {navLinks.map(({ title, href }, index) => (
+                          <li className="rounded-full btn-padding hover:bg-primary focus:bg-primary" key={index}>
+                            <Link
+                              href={href}
+                              key={title}
+                              className={`${poppins.className} block py-2 px-3 text-accent text-lg rounded md:bg-transparent md:p-0 font-bold hover:text-neutral focus:text-neutral`}>
+                              {title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Servicios
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Contacto
-                </a>
-              </li> */}
-              </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </nav>
+            <Disclosure.Panel className="sm:hidden">
+              <div className="space-y-1">
+                <ul className="flex flex-col font-medium md:p-4  md:p-0 md:mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 card-blured-borderless items-start md:items-center">
+                  {navLinks.map(({ title, href }, index) => (
+                    <li className="rounded-full ps-3" key={index}>
+                      <Disclosure.Button>
+                        <Link
+                          href={href}
+                          key={title}
+                          className={`${poppins.className} block py-2 text-accent text-lg rounded md:p-0 font-bold focus:bg-primary`}>
+                          {title}
+                        </Link>
+                      </Disclosure.Button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
     </header>
   );
 };
 
 export default Navbar;
+

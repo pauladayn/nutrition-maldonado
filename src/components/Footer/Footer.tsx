@@ -20,14 +20,10 @@ const Footer = () => {
           Nutri&Vita | Daiana Maldonado - Nutricionista - MP 194
         </p>
       </div>
-      <ul className="flex flex-wrap items-center text-sm font-medium text-neutral dark:text-neutral sm:mt-0 justify-center space-x-6 order-1 md:order-2 pe-4">
+      <ul className="flex flex-wrap items-center text-sm font-medium text-neutral dark:text-neutral sm:mt-0 justify-center space-x-6 order-1 md:order-2 md:pe-4">
         {
-          //hover:shadow-lg 
-          //focus:shadow-lg
-          //active:shadow-lg
-          //shadow-md 
           socialMediaItems.map(({ id, href, icon, alt }) => (
-            <Link href={href} key={id} className="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out shadow-md cursor-pointer focus:ring-2 focus:ring-lime-200 hover:ring-2 hover:ring-lime-200">
+            <Link href={href} key={id} className="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-md cursor-pointer focus:ring-2 focus:ring-accent hover:ring-2 hover:ring-accent">
               <Image alt={alt} src={icon} />
             </Link>
 

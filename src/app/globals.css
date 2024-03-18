@@ -1,38 +1,23 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nanum+Myeongjo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(from 180deg at 50% 50%,
-      #16abff33 0deg,
-      #0885ff33 55deg,
-      #54d6ff33 120deg,
-      #0071ff33 160deg,
-      transparent 360deg);
-  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
+  --primary-glow: conic-gradient(from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg);
+  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(#00000080,
-      #00000040,
-      #00000030,
-      #00000020,
-      #00000010,
-      #00000010,
-      #00000080);
+  --tile-border: conic-gradient(#00000080, #00000040, #00000030, #00000020, #00000010, #00000010, #00000080);
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
@@ -85,60 +70,124 @@ body {
   overflow-x: hidden;
 }
 
+.lilac {
+  background-color: #cdc1ff;
+}
+
+.skyBlue {
+  background-color: #d0e4ff;
+}
+
+.peach {
+  background-color: #fedbb3;
+}
+
+.paleYellow {
+  background-color: #fff3b5;
+}
+
+.lilac-font {
+  color: #cdc1ff;
+}
+.skyBlue-font {
+  color: #d0e4ff;
+}
+
+.peach-font {
+  color: #fedbb3;
+}
+
+.paleYellow-font {
+  color: #fff3b5;
+}
 
 /* Glassmorphism card effect */
 .card-blured {
-  padding: .4rem 1.2rem;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(217, 255, 237, 0.043);
   border: 1px solid rgba(255, 255, 255, 0.608);
+}
+.card-blured-borderless {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(217, 255, 237, 0.043);
+}
+
+.soft-gradient {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #ece9e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.bg-pattern {
+  background-color: #f0f0f0;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #f0f0f0 9px), repeating-linear-gradient(#21a26455, #21a264);
+}
+.card-blured:hover {
+  border: none;
+}
+
+.btn-padding-xl {
+  text-align: center;
+  padding: 1rem 3rem;
+}
+.btn-padding,
+.btn-padding-lg {
+  padding: 0.4rem 1.2rem;
   text-align: center;
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-.dm-sans-links {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-.poppins-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.btn-padding {
+  min-height: 2.5rem;
 }
 
-.dm-sans-title {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 1000;
-}
-.poppins-title { 
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+.btn-padding-lg {
+  min-height: 3.2rem;
+  transition: all 0.2s;
 }
 
-.nanum-body { 
-  font-family: "Nanum Myeongjo", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.nanum-body-bold { 
-  font-family: "Nanum Myeongjo", serif;
-  font-weight: 800;
-  font-style: normal;
+.btn-padding-lg:hover {
+  background: #dee2d0;
+  color: #224631;
+  border: none;
 }
 
+.btn-padding-lg:hover > svg {
+  fill: #224631;
+}
+
+.btn-padding-lg svg {
+  transform: translateX(5px);
+}
+
+.btn-padding-lg:active {
+  transform: scale(0.95);
+}
+
+.line-height-lg {
+  line-height: 4.25rem;
+}
+
+.link-arrow > svg {
+  fill: red;
+}
+
+/* carrousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.background-img {
+  object-fit: cover;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -149,3 +198,4 @@ a {
     color-scheme: light;
   }
 }
+
