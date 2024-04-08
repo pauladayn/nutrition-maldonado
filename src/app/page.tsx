@@ -84,7 +84,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Image src={wave} alt="wave-background-image" />
+        <div className="sm:hidden flex">
+          <Image src={wave} alt="wave-background-image" />
+        </div>
       </div>
       <div className="flex flex-col max-w-full px-6 lg:px-16 py-6 lg:py-12 gap-8 soft-gradient">
         <div className="flex align-center flex-col md:flex-row">
@@ -95,12 +97,12 @@ export default function Home() {
             </h4>
             <Link
               href="/sobre-mi"
-              className={`${poppins.className} flex items-center justify-center gap-2 btn-padding-lg text-lg rounded-full px-2 py-1 bg-primary text-neutral self-start hover:shadow-lg hover-shadow-paleGreen hover:secondary hover:scale-110 mt-4 md:mt-0`}>
+              className={`${poppins.className} flex items-center justify-center gap-2 btn-padding-lg text-lg rounded-full px-2 py-1 bg-primary text-neutral self-start md:self-end hover:shadow-lg hover-shadow-paleGreen hover:secondary hover:scale-110 md:mx-auto mt-4 md:mt-0`}>
               <span>Más detalles</span>
               <Image src={arrowIcon} alt="arrow-icon" width={24} height={24} className="self-center ms-1" />
             </Link>
           </div>
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 lg:flex justify-center hidden">
             <Image src={profilePhoto} alt="profile-photo-consultory" className="rounded-2xl" width={370} />
           </div>
         </div>
