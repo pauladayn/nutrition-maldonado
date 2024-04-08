@@ -7,7 +7,7 @@ import type { CardDetail } from '@/app/types/CardType';
 const CardsSection = ({ cardDetails }: { cardDetails: Array<CardDetail> }) => {
   return (
     <div>
-      <div className="flex max-w-full lg:max-w-6xl lg:mx-auto xl:max-w-full gap-4 flex-wrap md:mt-6 justify-center">
+      <div className="flex max-w-full lg:max-w-6xl lg:mx-auto 2xl:max-w-full gap-4 flex-wrap md:mt-6 justify-center">
         {cardDetails.map(({ title, subtitle, path, img, btnText, bg }: CardDetail, index: number) => (
           <div className="max-w-sm rounded-2xl flex flex-col my-4 md:my-0" key={index}>
             <Image src={img} alt="card-image" className="rounded-2xl object-cover w-full h-52" />

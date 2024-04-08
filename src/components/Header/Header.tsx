@@ -40,7 +40,7 @@ const Navbar = () => {
                             <Link
                               href={href}
                               key={title}
-                              className={`${poppins.className} block py-2 px-3 text-accent text-lg rounded md:bg-transparent md:p-0 font-bold hover:text-neutral focus:text-neutral`}>
+                              className={`${poppins.className} block py-2 px-3 text-accent text-lg rounded md:bg-transparent md:p-0 font-bold hover:text-neutral`}>
                               {title}
                             </Link>
                           </li>

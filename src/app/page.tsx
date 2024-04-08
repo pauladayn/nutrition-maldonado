@@ -6,11 +6,14 @@ import Link from 'next/link';
 import { dmSans, poppins } from './fonts';
 import PlansSectionCards from '@/components/PlansSection/PlansSectionCards';
 import ServicesSection from '@/components/ServicesSection/ServicesSectionCards';
+import logo from '../../public/assets/logoFlat.png';
+import profilePhoto from '../../public/assets/consul02.jpeg';
+import wave from '../../public/assets/wave.svg';
 
 export default function Home() {
   return (
     <>
-    {/* bg-pattern */}
+      {/* bg-pattern */}
       <div className="min-h-2 bg-paleGreen pt-24 pb-20 px-6 lg:px-16 max-w-full">
         <div className="flex mt-3 md:mt-6 justify-evenly">
           <div className="flex flex-col space-y-8  max-w-full md:max-w-4xl gap-8 self-center">
@@ -64,6 +67,43 @@ export default function Home() {
           </Link>
         </div>
         <ServicesSection cardDetails={services} />
+      </div>
+      <div>
+        <div className="flex flex-col max-w-full px-6 lg:px-16 py-6 lg:py-12 gap-8 soft-gradient">
+          <div className="flex align-center flex-col md:flex-row self-center">
+            <div className="flex flex-col gap-4">
+              <div className="self-center">
+                <Image src={logo} alt="nutrivita-logo" />
+              </div>
+              <div className="max-w-4xl rounded-xl border-2 border-primary p-8">
+                <h1 className={`${poppins.className} text-4xl lg:text-6xl text-primary font-bold text-center mb-5`}>Nutri y Vita</h1>
+                <h4 className={`${dmSans.className} text-2xl lg:text-4xl text-accent text-center`}>
+                  Nació para mejorar y potenciar la calidad de vida de las personas, mediante 2 pilares: nutrición y actividad física
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Image src={wave} alt="wave-background-image" />
+      </div>
+      <div className="flex flex-col max-w-full px-6 lg:px-16 py-6 lg:py-12 gap-8 soft-gradient">
+        <div className="flex align-center flex-col md:flex-row">
+          <div className="flex flex-col gap-4 md:gap-8 flex-1 self-center">
+            <h1 className={`${poppins.className} text-4xl lg:text-6xl text-olive font-bold`}>¡Hola!</h1>
+            <h4 className={`${dmSans.className} text-2xl lg:text-4xl text-accent`}>
+              Soy Daiana Maldonado y soy Nutricionista, egresada de la Licenciatura en Nutrición de la Universidad Católica de La Plata.
+            </h4>
+            <Link
+              href="/sobre-mi"
+              className={`${poppins.className} flex items-center justify-center gap-2 btn-padding-lg text-lg rounded-full px-2 py-1 bg-primary text-neutral self-start hover:shadow-lg hover-shadow-paleGreen hover:secondary hover:scale-110 mt-4 md:mt-0`}>
+              <span>Más detalles</span>
+              <Image src={arrowIcon} alt="arrow-icon" width={24} height={24} className="self-center ms-1" />
+            </Link>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <Image src={profilePhoto} alt="profile-photo-consultory" className="rounded-2xl" width={370} />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -20,6 +20,7 @@ module.exports = {
       footer: "#8FA6CB",
       neutral: "#f0f0f0",
       black: "#000000",
+      accent: "#224631",
     }),
     textColor: {
       primary: "#21a264",

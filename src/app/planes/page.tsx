@@ -18,7 +18,7 @@ export default function PlansPage() {
               <span className="font-black">cambio de hábitos</span>.
             </h4>
             <h4 className={`${montserrat.className} text-center text-2xl md:text-4xl leading-10 text-olive font-extrabold`}>
-              <span className="italic">Come saludable, se razonable.</span>
+              <span className="italic"> ¡Elegí el plan que necesites!</span>
             </h4>
           </div>
         </div>
@@ -26,10 +26,8 @@ export default function PlansPage() {
       </div>
       <div className="relative my-12">
         <Image src={hero} alt="hero-background-img" className="background-img shadow-xl" fill={true} />
-        <div className='relative z-30 py-12'>
-          <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>
-            ¡Elegí el plan que necesites!
-          </h4>
+        <div className="relative z-30 py-12">
+          <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>Come saludable, se razonable.</h4>
         </div>
       </div>
     </>

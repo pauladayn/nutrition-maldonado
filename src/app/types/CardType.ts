@@ -6,6 +6,7 @@ export type CardDetail = {
     path: string;
     img: StaticImageData;
     btnText: string;
+    infoImage?: StaticImageData;
     info?: { title: string; text: string }[];
     mainInfo?: string;
     bg?: string;

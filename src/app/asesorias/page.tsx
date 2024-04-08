@@ -17,7 +17,7 @@ const Asesorias = () => {
               tengas de forma económica y eficiente.
             </h4>
             <h4 className={`${montserrat.className} text-center text-2xl md:text-4xl leading-10 text-olive font-extrabold`}>
-              <span className="italic">Construye hábitos que te construyan a ti.</span>
+              <span className="italic">Hay una asesoría para vos</span>
             </h4>
           </div>
         </div>
@@ -26,7 +26,9 @@ const Asesorias = () => {
       <div className="relative my-12">
         <Image src={hero} alt="hero-background-img" className="background-img shadow-xl" fill={true} />
         <div className="relative z-30 py-12">
-          <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>Hay una asesoría para vos</h4>
+          <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>
+            Construye hábitos que te construyan a ti
+          </h4>
         </div>
       </div>
     </>
