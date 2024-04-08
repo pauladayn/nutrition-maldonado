@@ -27,7 +27,7 @@ export default function Contact() {
                 style={{ border: 0 }}
                 /*      allowfullscreen={true} */
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
               <h4 className={`${dmSans.className} text-center font-medium text-2xl md:text-4xl leading-10 text-accent mb-8`}>
@@ -35,14 +35,14 @@ export default function Contact() {
               </h4>
               <ul className="flex items-center text-neutral sm:mt-0 justify-center space-x-6 card-blured p-4 rounded-xl gap-4 shadow-xl">
                 {socialMediaItems.map(({ id, href, icon, alt }) => (
-                  <div className='flex flex-col items-center'>
+                  <div className="flex flex-col items-center" key={id}>
                     <Link
                       href={href}
                       key={id}
                       className="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-md cursor-pointer focus:ring-2 focus:ring-accent hover:ring-2 hover:ring-accent shadow-lg">
                       <Image alt={alt} src={icon} />
                     </Link>
-                    <p className='text-accent'>{id}</p>
+                    <p className="text-accent">{id}</p>
                   </div>
                 ))}
               </ul>
