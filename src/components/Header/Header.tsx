@@ -30,20 +30,22 @@ const Navbar = () => {
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <p className={`${montserrat.className} text-primary md:text-2xl font-semibold whitespace-nowrap`}>Nutri&Vita</p>
+                    <Link href="/" className="self-center">
+                      <p className={`${montserrat.className} text-primary md:text-2xl font-semibold whitespace-nowrap`}>Nutri&Vita</p>
+                    </Link>
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
                       <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                         {navLinks.map(({ title, href }, index) => (
-                          <li className="rounded-full btn-padding hover:bg-primary focus:bg-primary" key={index}>
-                            <Link
-                              href={href}
-                              key={title}
-                              className={`${poppins.className} block py-2 px-3 text-accent text-lg rounded md:bg-transparent md:p-0 font-bold hover:text-neutral`}>
+                          <Link
+                            href={href}
+                            key={title}
+                            className={`${poppins.className} block py-2 px-3 text-accent text-lg rounded md:bg-transparent md:p-0 font-bold hover:text-neutral`}>
+                            <li className="rounded-full btn-padding hover:bg-primary focus:bg-primary" key={index}>
                               {title}
-                            </Link>
-                          </li>
+                            </li>
+                          </Link>
                         ))}
                       </ul>
                     </div>
@@ -53,14 +55,14 @@ const Navbar = () => {
             </div>
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1">
-                <ul className="flex flex-col font-medium md:p-4  md:p-0 md:mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 card-blured-borderless items-start md:items-center">
+                <ul className="flex flex-col font-medium md:p-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 card-blured-borderless items-start md:items-center">
                   {navLinks.map(({ title, href }, index) => (
-                    <li className="rounded-full ps-3" key={index}>
+                    <li className="rounded-full p-4 ps-3" key={index}>
                       <Disclosure.Button>
                         <Link
                           href={href}
                           key={title}
-                          className={`${poppins.className} block py-2 text-accent text-lg rounded md:p-0 font-bold focus:bg-primary`}>
+                          className={`${poppins.className} block py-2 text-accent text-lg rounded p-5 font-bold focus:bg-primary`}>
                           {title}
                         </Link>
                       </Disclosure.Button>
