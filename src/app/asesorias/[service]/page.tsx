@@ -35,9 +35,9 @@ const AsesoryPage = ({ params }: { params: { service: number } }) => {
           <div className="flex-1">
             {services[service].info && (
               <div className={`rounded-xl flex flex-col ${services[service].bg}`}>
-                <div className='py-4 px-8'>
-                  {services[service].info!.map(info => (
-                    <div className="my-2">
+                <div className="py-4 px-8">
+                  {services[service].info!.map((info, index) => (
+                    <div className="my-2" key={index}>
                       <p className={`${montserrat.className} text-2xl font-bold`}>{info.title}</p>
                       <p className={`${montserrat.className} my-4 text-lg`}>{info.text}</p>
                     </div>
@@ -47,17 +47,16 @@ const AsesoryPage = ({ params }: { params: { service: number } }) => {
             )}
           </div>
         </div>
-
         <div className="flex flex-col gap-2 my-8">
           <div className="bg-white rounded-full">
-            <h3 className={`${poppins.className} text-4xl text-black line-height-lg text-center text-primary font-black`}>
+            <h3 className={`${poppins.className} text-4xl line-height-lg text-center text-primary font-black`}>
               Estás a un paso de comenzar a cumplir tus objetivos
             </h3>
           </div>
-
           <Link
-            href="#"
-            className={`${poppins.className} flex items-center justify-center btn-padding-xl text-xl rounded-full px-2 py-1 bg-primary text-neutral self-end shadow-lg  shadow-paleGreen hover:accent hover:scale-110 my-8 self-center`}>
+            target="_blank"
+            href={services[service].wspMsg}
+            className={`${poppins.className} flex items-center justify-center btn-padding-xl text-xl rounded-full px-2 py-1 bg-primary text-neutral shadow-lg  shadow-paleGreen hover:accent hover:scale-110 my-8 self-center`}>
             Solicitar asesoría personalizada
           </Link>
         </div>

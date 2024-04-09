@@ -74,7 +74,7 @@ export const services = [
     path: '/asesorias',
     img: card11,
     bg: 'peach',
-    // wspLink:  `https://wa.me/${testPhone}`
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa%20presencial`,
   },
   {
     title: 'Antropometría',
@@ -96,6 +96,7 @@ export const services = [
     path: '/asesorias',
     img: card09,
     bg: 'skyBlue',
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20antropometr%C3%ADa`,
   },
   {
     title: 'Asesoría online',
@@ -104,6 +105,7 @@ export const services = [
     path: '/asesorias',
     img: card10,
     bg: 'paleYellow',
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa%20online`,
     mainInfo:
       'Tanto la entrevista inicial como el seguimiento posterior se adaptan al formato virtual y contas con soporte por Whatsapp o email para resolver dudas o plantear reformulaciones en tus objetivos.',
   },
@@ -115,6 +117,7 @@ export const services = [
     path: '/asesorias',
     img: card06,
     bg: 'lilac',
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20controles`,
     mainInfo:
       'Accedé a ajustes de menú quincenales, recetarios para acompañarte en tu ciclo de comidas diarias. Es ideal si desde que arrancaste una asesoría conmigo, pasaron mas de 4 semanas.',
   },
@@ -274,3 +277,4 @@ export const followUpPlanInformation = [
 ];
 /* TEXTO ADICIONAL */
 /* Para comenzar un cambio que perdure en el tiempo, necesitamos arrancar con lo básico. Lo descargarás en formato pdf, listo para que puedas leerlo con comodidad y cuando desees desde tu celu o computadora. */
+

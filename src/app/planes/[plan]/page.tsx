@@ -28,8 +28,8 @@ const FoodPlanPage = ({ params }: { params: { plan: number } }) => {
         <h4 className={`${dmSans.className} text-center text-5xl leading-10 font-bold text-olive`}>Que encontrarás en este plan</h4>
         <div className="rounded-xl p-8 shadow-xl max-w-2xl mx-auto sky-gradient">
           <div className="mt-4">
-            {plans[plan].info.map(info => (
-              <div className="my-3">
+            {plans[plan].info.map((info, index) => (
+              <div className="my-3" key={index}>
                 <div className="flex items-center gap-3">
                   <span>
                     <Image src={handsIcon} alt="hands-icon" width={18} height={18} />
