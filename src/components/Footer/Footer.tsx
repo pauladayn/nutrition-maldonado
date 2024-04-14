@@ -24,7 +24,7 @@ const Footer = () => {
           <Link
             href={href}
             key={id}
-            className="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-md cursor-pointer ">
+            className="mb-2 inline-block rounded-full p-5 md:p-3 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-md cursor-pointer ">
             <Image alt={alt} src={icon} />
           </Link>
         ))}

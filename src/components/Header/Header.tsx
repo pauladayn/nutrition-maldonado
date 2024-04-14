@@ -55,17 +55,12 @@ const Navbar = () => {
             </div>
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1">
-                <ul className="flex flex-col font-medium md:p-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 card-blured-borderless items-start md:items-center">
+                <ul className="flex flex-col font-medium px-6 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 card-blured-borderless items-start md:items-center">
                   {navLinks.map(({ title, href }, index) => (
                     <li className="rounded-full p-4 ps-3" key={index}>
-                      <Disclosure.Button>
-                        <Link
-                          href={href}
-                          key={title}
-                          className={`${poppins.className} block py-2 text-accent text-lg rounded p-5 font-bold focus:bg-primary`}>
-                          {title}
-                        </Link>
-                      </Disclosure.Button>
+                      <Link href={href} key={title} className={`${poppins.className} block py-2 text-accent text-lg font-bold`}>
+                        <Disclosure.Button>{title}</Disclosure.Button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
