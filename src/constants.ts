@@ -6,17 +6,19 @@ import card01 from '../public/assets/mealplan.jpg';
 import card02 from '../public/assets/matcha.jpg';
 import card03 from '../public/assets/pathology.jpg';
 import card04 from '../public/assets/vegan.jpg';
-import card06 from '../public/assets/hero.jpg';
+import card06 from '../public/assets/hero03.jpg';
 import card09 from '../public/assets/antropometria.jpg';
 import card10 from '../public/assets/onlineMeeting.jpg';
 import card11 from '../public/assets/consulting.jpg';
 import sectionImg from '../public/assets/weightLifting.jpg';
+import { title } from 'process';
+import { info } from 'console';
 
 const testPhone = '5492974223518';
 const welcomeMessage = '?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20asesor%C3%ADas%20y%20planes';
 export const whatsapp = `https://wa.me/${testPhone}${welcomeMessage}`;
 
-const email = 'paudayup@gmail.com';
+const email = 'dai.mmaldonado@hotmail.com';
 const facebook = 'https://www.facebook.com/nutriyvita';
 
 export const socialMediaItems = [
@@ -68,11 +70,28 @@ export const navLinks = [
 
 export const services = [
   {
-    title: 'Asesoría presencial',
-    subtitle: 'Consulta inicial para diseñar un plan nutricional a tu medida. Seguimiento posterior para alcanzar tus objetivos.',
+    title: 'Asesoría presencial personalizada',
+    subtitle:
+      'A través de una entrevista acerca de tus hábitos y estilo de vida, se evaluará si necesitas un plan de alimentación cualitativo o cuantitativo.',
     btnText: 'Quiero empezar',
     path: '/asesorias',
     img: card11,
+    mainInfo: '¿Por qué es necesaria?',
+    infoImage: card03,
+    info: [
+      {
+        title: 'Para evaluar tu composición corporal',
+        text: 'Y así poder realizar un plan de alimentación acorde a tus necesidades y objetivos.',
+      },
+      {
+        title: 'Para evaluar tu estado nutricional',
+        text: 'Y así poder realizar un plan de alimentación acorde a tus necesidades y objetivos.',
+      },
+      {
+        title: 'Educacion Nutricional',
+        text: 'Además sumaremos educación nutricional a través de ejemplos con imágenes didácticas. Al momento de tomar tus datos antropométricos como peso y talla, podes sumar una antropometria (esto tiene un costo extra)',
+      },
+    ],
     bg: 'peach',
     wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa%20presencial`,
   },
@@ -100,10 +119,22 @@ export const services = [
   },
   {
     title: 'Asesoría online',
-    subtitle: 'Esta consulta a distancia, es completamente personalizada e individual.',
+    subtitle:
+      'A través de una entrevista acerca de tus hábitos y estilo de vida, se evaluará si necesitas un plan de alimentación cualitativo o cuantitativo.',
     btnText: 'Quiero empezar',
     path: '/asesorias',
     img: card10,
+    infoImage: card10,
+    info: [
+      {
+        title: 'Entrevista inicial',
+        text: 'Necesitas tener balanza o un cm para medirte vos (si no sabes, no te preocupes, te aportamos una guía para que puedas medirte!) O bien, podes buscar una nutri antropometrista  en tu zona y conseguir el informe . Me lo envías y lo revisamos juntos!',
+      },
+      {
+        title: 'Seguimiento posterior',
+        text: 'Adaptado al formato virtual y contas con soporte por Whatsapp o email para resolver dudas o plantear reformulaciones en tus objetivos.',
+      },
+    ],
     bg: 'paleYellow',
     wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa%20online`,
     mainInfo:
@@ -125,8 +156,8 @@ export const services = [
 
 export const plans = [
   {
-    title: 'Quiero bajar de peso',
-    subtitle: 'El plan inicial para aprender paso a paso a generar un cambio de hábitos sostenible y perder grasa.',
+    title: 'QUIERO BAJAR DE PESO',
+    subtitle: 'El plan inicial para aprender paso a paso a generar un cambio de habitos sostenible y perder grasa.',
     price: '$14999',
     btnText: 'Conocer más',
     infoImage: card01,
@@ -146,14 +177,15 @@ export const plans = [
       },
     ],
     mainInfo:
-      'Este plan es ideal para comenzar un cambio de hábitos. Está pensado para que lo hagas al menos durante 4 semanas y cuando te sientas seguro puedas avanzar un paso más y adquirir el plan Personalizado.',
+      'Este plan es para vos si querés comenzar un cambio de hábitos. Está pensado para que lo realices al menos 4 semanas y cuando te sientas seguro, puedas lanzarte al próximo desafío de elegir entre un control check o adquirir el plan personalizado.',
     path: '/planes',
     bg: 'peach',
     img: card04,
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20plan%20para%20bajar%20de%20peso`,
   },
   {
-    title: 'Personalizado',
-    subtitle: 'Ideal para los cancheros. Con kilo calorías y porciones de comida calculadas.',
+    title: 'PLAN 100% PERSONALIZADO',
+    subtitle: 'Ideal para cancheros, para que alcances tus resultados soñados.',
     price: '$19999',
     btnText: 'Conocer más',
     infoImage: card11,
@@ -176,13 +208,16 @@ export const plans = [
         text: 'Contacto directo por Whatsapp para resolver dudas',
       },
     ],
+    mainInfo:
+      'Es una guía ideal y completa que te ayudará a contar calorías según tus objetivos o entrenamiento. Está pensada para que la realices al menos 4 semanas y cuando te sientas seguro, hacemos un control check.',
     path: '/planes',
     bg: 'skyBlue',
     img: card01,
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20plan%20personalizado`,
   },
   {
-    title: 'Patología clínica',
-    subtitle: 'Inicial para un cambio de hábitos y acompañar una enfermedad o patología.',
+    title: 'ASESORÍA SOS: APTO PATOLOGIAS',
+    subtitle: 'Es ideal si estás cursando alguna enfermedad crónica (con o sin síntomas) y querés acompañar con el cambio de hábitos y ganar salud.',
     price: '$14999',
     btnText: 'Conocer más',
     infoImage: card01,
@@ -207,14 +242,16 @@ export const plans = [
       },
     ],
     mainInfo:
-      'Este plan es ideal para comenzar si nunca hiciste una asesoría conmigo. Está pensado para que lo hagas al menos durante 4 semanas y cuando te sientas seguro puedas avanzar un paso más y adquirir el plan Personalizado.',
+      'Este plan está pensado para que disminuyas la sintomatología o mejores tu salud a largo plazo, acompañado con un cambio de hábitos sostenible en el tiempo. Pasadas las 4 semanas, si te sentís preparado, podés sacar un turno control para chequear avances y la adherencia. Y por qué no, nuevos objetivos!',
     path: '/planes',
     bg: 'paleYellow',
     img: card03,
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20asesor%C3%ADa%20apto%20patologias`,
   },
   {
-    title: 'Vegetariano - vegano',
-    subtitle: 'Guía de alimentación que te dará un pantallazo en este estilo de vida y un menú simple.',
+    title: 'VEGETARIANO - VEGANO',
+    subtitle:
+      'Estás en una transición de alimentación y tenes dudas? Esta guía es ideal para vos, te dará un pantallazo de que deberías saber al adoptar este estilo de vida.',
     price: '$18999',
     btnText: 'Conocer más',
     infoImage: card11,
@@ -246,10 +283,11 @@ export const plans = [
       },
     ],
     mainInfo:
-      'Ideal para quienes están buscando llevar una alimentación basada en plantas, de forma consciente e informados. TODO lo que necesitas aprender para llevar adelante este estilo de alimentación, sin riesgos y sumando salud.',
+      'Es ideal para quienes estén buscando llevar una alimentación vegetariana/vegana/plant based de forma consciente. En esta guía encontraras TODO lo que necesitas aprender si elegís esta alimentación para evitar riesgos y ganar salud.',
     path: '/planes',
     bg: 'lilac',
     img: card02,
+    wspMsg: `https://wa.me/${testPhone}?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20plan%20vegano`,
   },
 ];
 
