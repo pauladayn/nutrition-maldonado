@@ -11,8 +11,6 @@ import card09 from '../public/assets/antropometria.jpg';
 import card10 from '../public/assets/onlineMeeting.jpg';
 import card11 from '../public/assets/consulting.jpg';
 import sectionImg from '../public/assets/weightLifting.jpg';
-import { title } from 'process';
-import { info } from 'console';
 
 const testPhone = '5492974223518';
 const welcomeMessage = '?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20asesor%C3%ADas%20y%20planes';
