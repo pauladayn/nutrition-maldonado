@@ -106,7 +106,6 @@ body {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(217, 255, 237, 0.043);
-  border: 1px solid rgba(255, 255, 255, 0.608);
 }
 .card-blured-borderless {
   backdrop-filter: blur(16px) saturate(180%);

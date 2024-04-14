@@ -1,3 +1,4 @@
+'use client';
 import { poppins, montserrat, dmSans } from '../fonts';
 import CardsSection from '@/components/ServicesSection/ServicesSectionCards';
 import { services } from '@/constants';
@@ -24,7 +25,15 @@ const Asesorias = () => {
         <CardsSection cardDetails={services} />
       </div>
       <div className="relative my-12">
-        <Image src={hero} alt="hero-background-img" className="background-img shadow-xl" fill={true} />
+        <Image
+          src={hero}
+          placeholder="blur"
+          loading="lazy"
+          onLoad={(e: React.SyntheticEvent<HTMLImageElement, Event>) => e.currentTarget.classList.remove('blur-md')}
+          alt="hero-background-img"
+          className="background-img shadow-xl blur-md"
+          fill={true}
+        />
         <div className="relative z-30 py-12">
           <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>
             Construye hábitos que te construyan a ti

@@ -1,3 +1,4 @@
+'use client';
 import { poppins, montserrat, dmSans } from '../fonts';
 import PlansSectionCards from '@/components/PlansSection/PlansSectionCards';
 import { plans } from '@/constants';
@@ -14,18 +15,26 @@ export default function PlansPage() {
           </h1>
           <div className="flex flex-col gap-8 max-w-7xl mb-4 lg:mb-12">
             <h4 className={`${dmSans.className} text-center font-medium text-2xl md:text-4xl leading-10`}>
-              Cada uno de los planes te ayudará a lograr el cambio en el estilo de vida y el cuerpo soñado. Siempre trabajamos desde el enfoque de{' '}
-              <span className="font-black">cambio de hábitos</span>.
+              Cada uno de los planes te ayudará a lograr el cambio en el estilo de vida y el cuerpo soñado. Siempre trabajamos desde el enfoque de
+              <span className="font-black"> cambio de hábitos</span>.
             </h4>
             <h4 className={`${montserrat.className} text-center text-2xl md:text-4xl leading-10 text-olive font-extrabold`}>
-              <span className="italic"> ¡Elegí el plan que necesites!</span>
+              <span className="italic">¡Elegí el plan que necesites!</span>
             </h4>
           </div>
         </div>
         <PlansSectionCards cardDetails={plans} />
       </div>
       <div className="relative my-12">
-        <Image src={hero} alt="hero-background-img" className="background-img shadow-xl" fill={true} />
+        <Image
+          src={hero}
+          alt="hero-background-img"
+          placeholder="blur"
+          loading="lazy"
+          onLoad={(e: React.SyntheticEvent<HTMLImageElement, Event>) => e.currentTarget.classList.remove('blur-md')}
+          className="background-img shadow-xl blur-md"
+          fill={true}
+        />
         <div className="relative z-30 py-12">
           <h4 className={`${dmSans.className} text-center font-black text-2xl md:text-5xl leading-10 bg-white`}>Come saludable, se razonable.</h4>
         </div>
