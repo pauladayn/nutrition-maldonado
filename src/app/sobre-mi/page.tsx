@@ -20,7 +20,7 @@ export default function About() {
               <h4 className={`${dmSans.className} text-center font-medium text-2xl md:text-4xl lg:text-left leading-10`}>
                 ¡Hola! Soy Daiana Maldonado
               </h4>
-              <div className="flex flex-col gap-1 md:gap-8 px-10 md:px-0">
+              <div className="flex flex-col gap-1 md:gap-8 md:px-0">
                 <h4 className={`${dmSans.className} text-start md:text-center font-medium text-lg md:text-xl lg:text-left leading-10`}>
                   Me egrése de Licenciatura en Nutrición egresada de la Universidad Católica de La Plata en Marzo del 2014. Al finalizar mis estudios,
                   descubrí que mi pasión es la educación nutricional y nutrición deportiva.
@@ -45,7 +45,7 @@ export default function About() {
           </div>
           <div className="my-8 flex flex-col gap-8 ">
             <p className={`${poppins.className} text-olive md:text-6xl text-4xl text-center`}>Especialidades</p>
-            <div className="flex px-4 md:px-0 lg:gap-8">
+            <div className="flex md:px-0 lg:gap-8">
               <ul className="p-8 rounded-xl bg-skyBlue shadow-xl flex flex-col list-disc justify-center">
                 {especialidades.map(({ id, item }) => (
                   <li key={id} className={`${poppins.className} my-4`}>
