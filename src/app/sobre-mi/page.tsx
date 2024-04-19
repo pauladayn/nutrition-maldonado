@@ -37,8 +37,8 @@ export default function About() {
                 </h4>
                 <h4 className={`${dmSans.className} text-start md:text-center font-medium text-lg md:text-xl lg:text-left leading-10`}>
                   Me apasiona brindar información y transmitir conocimientos de la nutrición desde una perspectiva mas criolla y simple para
-                  comprender. Objetivo Orientado a motivar a que las personas logren un cambio sostenible en el estilo de vida, mejorar/potenciar el
-                  rendimiento deportivo/recreativo.
+                  comprender. Mi objetivo está orientado a motivar a que las personas logren un cambio sostenible en el estilo de vida,
+                  mejorar/potenciar el rendimiento deportivo/recreativo.
                 </h4>
               </div>
             </div>

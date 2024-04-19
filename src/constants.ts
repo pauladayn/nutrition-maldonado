@@ -155,7 +155,7 @@ export const services = [
 export const plans = [
   {
     title: 'QUIERO BAJAR DE PESO',
-    subtitle: 'El plan inicial para aprender paso a paso a generar un cambio de habitos sostenible y perder grasa.',
+    subtitle: 'El plan inicial para aprender paso a paso a generar un cambio de hábitos sostenible y perder grasa.',
     price: '$14999',
     btnText: 'Conocer más',
     infoImage: card01,
@@ -167,11 +167,11 @@ export const plans = [
       },
       {
         title: 'Cómo armar cada comida',
-        text: 'Ejemplos concretos de desayunos, meriendas, almuerzos y cenas',
+        text: 'Ejemplos concretos de desayunos, meriendas, almuerzos y cenas. Incluye menú quincenal.',
       },
       {
         title: 'Tips para tu objetivo',
-        text: 'Contacto directo conmigo por Whatsapp para sacarte cualquier duda que te vaya surgiendo',
+        text: 'Estrategias nutricionales para mejorar adherencia al plan y además contacto directo conmigo por Whatsapp para sacarte cualquier duda que te vaya surgiendo',
       },
     ],
     mainInfo:
@@ -227,7 +227,7 @@ export const plans = [
       },
       {
         title: 'Cómo armar cada comida',
-        text: 'Ejemplos concretos de desayunos, meriendas, almuerzos y cenas',
+        text: 'Ejemplos concretos de desayunos, meriendas, almuerzos y cenas.  Incluye menú quincenal.',
       },
 
       {
@@ -257,11 +257,7 @@ export const plans = [
     info: [
       {
         title: 'Nutrientes críticos',
-        text: 'Cuáles son y cómo podemos cubrir su requerimiento',
-      },
-      {
-        title: 'Vitamina b12',
-        text: 'TODO lo que tenes que saber: valores normales, suplementación y más',
+        text: 'Cuáles son y cómo podemos cubrir su requerimiento. TODO lo que tenes que saber: valores normales, suplementación y más (B12 inclusive no te preocupes)',
       },
       {
         title: 'Grupos de alimentos',
